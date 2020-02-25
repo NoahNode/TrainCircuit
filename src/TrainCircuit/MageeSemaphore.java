@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 //MageeSemaphore.java
 //This is an implementation of the traditional (counting) Semaphore with P() and V() operations
-    class MageeSemaphore
+    public class MageeSemaphore
 {
     private Semaphore sem;
 
