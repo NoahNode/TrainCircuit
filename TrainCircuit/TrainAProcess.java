@@ -1,5 +1,6 @@
-import java.util.Iterator;
-import java.util.concurrent.CopyOnWriteArrayList;
+package TrainCircuit;
+
+import java.util.concurrent.Semaphore;
 
 /* Train type A Process class*/
 class TrainAProcess extends Thread {

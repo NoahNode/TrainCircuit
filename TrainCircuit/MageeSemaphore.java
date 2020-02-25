@@ -1,4 +1,6 @@
-    import java.util.concurrent.Semaphore;
+package TrainCircuit;
+
+import java.util.concurrent.Semaphore;
 
 //MageeSemaphore.java
 //This is an implementation of the traditional (counting) Semaphore with P() and V() operations
