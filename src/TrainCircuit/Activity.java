@@ -3,12 +3,6 @@ package TrainCircuit;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-// - Represents the train track activity in a thread-safe CopyOnWriteArrayList<String>
-// - called theActivities
-// - addMovementTo(<Integer>) adds a train movement (destination) activity to the record
-// - addMessage(<String>) adds a message to the record
-// - printActivities() display all the activity history of the train movement
-// - trackString() takes a snapshot of the traintrack (with trains) for printing
 public class Activity {
 
     private final CopyOnWriteArrayList<String> theActivities;
@@ -38,7 +32,7 @@ public class Activity {
 
     public void printActivities() {
         // print all the train activity history
-        System.out.println("TRAIN TRACK ACTIVITY(Tracks [0..18])");
+        System.out.println("TRAIN TRACK ACTIVITY(Tracks [0..16])");
         Iterator<String> iterator = theActivities.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
@@ -47,18 +41,18 @@ public class Activity {
 
     // Utility method to represent the track as a string for printing/display
     public String trackString() {
-        String trackStateAsString = "           " + trainTrack[5] + "\n"
-                + "        " + trainTrack[4] + "  " + trainTrack[6] + "\n"
-                + "      " + trainTrack[3] + "      " + trainTrack[7] + "\n"
-                + "      " + trainTrack[2] + "      " + trainTrack[8] + "\n"
-                + "        " + trainTrack[1] + "  " + trainTrack[9] + "\n"
-                + "           " + trainTrack[0] + "\n"
-                + "        " + trainTrack[10] + "  " + trainTrack[18] + "\n"
-                + "      " + trainTrack[11] + "      " + trainTrack[17] + "\n"
-                + "      " + trainTrack[12] + "      " + trainTrack[16] + "\n"
-                + "        " + trainTrack[13] + "  " + trainTrack[15] + "\n"
-                + "           " + trainTrack[14] + "\n";
+        String trackStateAsString = trainTrack[2] + trainTrack[3] + trainTrack[4] + "\n"
+                + trainTrack[1] + "    " + trainTrack[5] + "\n"
+                + trainTrack[0] + "    " + trainTrack[6] + "\n"
+                + trainTrack[9] + trainTrack[8] + trainTrack[7] + "\n"
+                + trainTrack[10] + "    " + trainTrack[16] + "\n"
+                + trainTrack[11] + "    " + trainTrack[15] + "\n"
+                + trainTrack[12] + trainTrack[13] + trainTrack[14] + "\n";
         return (trackStateAsString);
     }// end trackString
 
-} // end Activity
+}// end Activity
+
+
+
+
