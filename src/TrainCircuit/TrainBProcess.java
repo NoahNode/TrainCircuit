@@ -14,9 +14,12 @@ class TrainBProcess extends Thread {
         // wait for clearance before moving on to the track
         theTrack.trainB_MoveOnToTrack(trainName); // move on to track B
         int circuitCount = 0;
-        while (circuitCount < 5) { // keep cycling the B track loop
-            theTrack.trainB_MoveAroundToSharedTrack(trainName); // move around B loop
-            theTrack.trainB_MoveAlongSharedTrack(trainName); // move along shared track
+        while (circuitCount < 1) { // keep cycling the B track loop
+            theTrack.trainB_MoveAroundToSharedTrack_First(trainName); // move around B loop
+            theTrack.trainB_MoveAlongSharedTrack_First(trainName); // move along shared track
+            theTrack.trainB_MoveAroundToSharedTrack_Second(trainName); // move around A loop
+            theTrack.trainB_MoveAlongSharedTrack_Second(trainName); // move along shared track
+            theTrack.trainB_MoveBackToBeginning (trainName); //move train back to beginning
             circuitCount++;
         }
         theTrack.trainB_MoveOffTrack(trainName); // move off the track
