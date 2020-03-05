@@ -1,8 +1,8 @@
 package TrainCircuit;
 class TrainTrackDriver {
 
-    static final int NUM_OF_A_TRAINS = 20;
-    static final int NUM_OF_B_TRAINS = 20;
+    static final int NUM_OF_A_TRAINS = 10;
+    static final int NUM_OF_B_TRAINS = 10;
     static TrainTrack theTrainTrack;
 
     public static void main(String[] args) {
@@ -17,11 +17,9 @@ class TrainTrackDriver {
 
         // create trains to enter the track
         for (int i = 0; i < NUM_OF_A_TRAINS; i++) {
-            CDS.idleQuietly((int) (Math.random() * 100));
             trainAProcess[i] = new TrainAProcess("A" + i, theTrainTrack);
         }
         for (int i = 0; i < NUM_OF_B_TRAINS; i++) {
-            CDS.idleQuietly((int) (Math.random() * 100));
             trainBProcess[i] = new TrainBProcess("B" + i, theTrainTrack);
         }
 
