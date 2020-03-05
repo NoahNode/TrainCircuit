@@ -1,16 +1,12 @@
 package TrainCircuit;
-
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Activity {
 
     private final CopyOnWriteArrayList<String> theActivities;
-
     private final String[] trainTrack;
 
-    // Constructor for objects of class Activity
-    // A reference to the track is passed as a parameter
     public Activity(String[] trainTrack) {
         theActivities = new CopyOnWriteArrayList<>();
         this.trainTrack = trainTrack;

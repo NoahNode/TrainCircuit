@@ -1,6 +1,4 @@
 package TrainCircuit;
-
-//CDS.java - Useful class for Concurrent and Distributed Systems
 public class CDS {
 
     public static void idle(int millisecs) { // with messages

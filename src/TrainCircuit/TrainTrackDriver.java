@@ -1,15 +1,14 @@
 package TrainCircuit;
 class TrainTrackDriver {
 
-    static final int NUM_OF_A_TRAINS = 1;
-    static final int NUM_OF_B_TRAINS = 1;
+    static final int NUM_OF_A_TRAINS = 20;
+    static final int NUM_OF_B_TRAINS = 20;
     static TrainTrack theTrainTrack;
 
     public static void main(String[] args) {
 
         // create a train track
         theTrainTrack = new TrainTrack();
-
         System.out.println("STARTED");
 
         // create arrays to hold the trains
@@ -18,11 +17,11 @@ class TrainTrackDriver {
 
         // create trains to enter the track
         for (int i = 0; i < NUM_OF_A_TRAINS; i++) {
-            CDS.idleQuietly((int) (Math.random() * 1000));
+            CDS.idleQuietly((int) (Math.random() * 100));
             trainAProcess[i] = new TrainAProcess("A" + i, theTrainTrack);
         }
         for (int i = 0; i < NUM_OF_B_TRAINS; i++) {
-            CDS.idleQuietly((int) (Math.random() * 1000));
+            CDS.idleQuietly((int) (Math.random() * 100));
             trainBProcess[i] = new TrainBProcess("B" + i, theTrainTrack);
         }
 
@@ -54,8 +53,6 @@ class TrainTrackDriver {
         theTrainTrack.theTrainActivity.printActivities();
 
         // Final message
-        System.out.println("All trains have successfully travelled 5 circuits of their track loop ");
+        System.out.println("All trains have successfully travelled the loop of the track.");
     } // end main
-
-} // end TrainsOnTrack class
-
+}
